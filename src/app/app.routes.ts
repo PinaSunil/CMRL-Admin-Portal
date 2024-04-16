@@ -31,6 +31,15 @@ export const routes: Routes = [
             (c) => c.ServicesComponent
           ),
       },
+
+      {
+        path: 'shiftEnd',
+        loadComponent: () =>
+          import(`../pages/reports/shift-end-page/shift-end-page.component`).then(
+            (c) => c.ShiftEndPageComponent
+          ),
+      },
+
       {
         path: 'transactionDataQuery',
         loadComponent: () =>

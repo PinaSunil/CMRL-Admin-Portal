@@ -1,0 +1,83 @@
+<div class="shiftend">
+  <mat-card class="shiftend__card">
+          <div class="shiftend__title-wrapper">
+             <app-page-title title="Tom Shift End Report"></app-page-title>
+          </div>
+          <mat-card-content>
+            <form class="shiftend__outer-container" [formGroup] = "shiftEndForm">
+              <app-drop-down
+                class="station-dropdown-container"
+                label="Stations"
+                placeholder="Select Station"
+              >
+              </app-drop-down>
+              <app-drop-down
+                class="station-dropdown-container"
+                label="Transaction Type"
+                placeholder="Select Transaction Type"
+              >
+              </app-drop-down>
+              <app-drop-down
+                class="station-dropdown-container"
+                label="Equipments"
+                placeholder="Select Equipments"
+              >
+              </app-drop-down>
+              
+              <app-drop-down
+                class="station-dropdown-container"
+                label="Stations"
+                placeholder="Select Station"
+              >
+              </app-drop-down>
+              <app-drop-down
+                class="station-dropdown-container"
+                label="Transaction Type"
+                placeholder="Select Transaction Type"
+              >
+              </app-drop-down>
+
+              <app-drop-down
+              class="station-dropdown-container"
+              label="Transaction Type"
+              placeholder="Select Transaction Type"
+            >
+            </app-drop-down>
+
+
+
+              <div class="shiftend__btn-container">
+                <app-button-field
+                  type="submit"
+                  label="Search"
+                  [width]="8"
+                  [height]="2.9"
+                >
+                </app-button-field>
+                <app-button-field
+                  type="submit"
+                  label="Clear"
+                  [width]="8"
+                  [height]="2.9"
+                >
+                </app-button-field>
+              </div>
+      
+              
+            </form>
+          </mat-card-content>
+
+
+  </mat-card>
+
+  <mat-card class="shiftend__card">
+    <mat-card-content>
+      <div class="content-container">
+        <app-search></app-search>
+        <app-fab-button></app-fab-button>
+      </div>
+      <app-table [tableData]="shiftEndTableData"></app-table>
+    </mat-card-content>
+  </mat-card>
+
+</div>

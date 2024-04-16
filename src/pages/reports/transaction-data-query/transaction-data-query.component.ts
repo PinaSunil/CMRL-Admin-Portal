@@ -6,6 +6,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {
   FormBuilder,
+  FormControl,
   FormGroup,
   ReactiveFormsModule,
   Validators,
@@ -40,14 +41,14 @@ import { transactionDataQueryInterface } from '../../../models/transaction-data-
   templateUrl: './transaction-data-query.component.html',
   styleUrl: './transaction-data-query.component.scss',
 })
-export class TransactionDataQueryComponent {
+export class TransactionDataQueryComponent implements OnInit {
   transReportForm!: FormGroup;
   myTableData: {
     displayedColumns: string[];
     dataSource: MatTableDataSource<transactionDataQueryInterface>;
   }[] = [
     {
-      displayedColumns: [
+      displayedColumns:[
         'transId',
         'transType',
         'lineId',
@@ -84,4 +85,10 @@ export class TransactionDataQueryComponent {
       ]),
     },
   ];
+
+  ngOnInit(): void {
+    this.transReportForm = new FormGroup({
+      firstName: new FormControl(),
+    });
+  }
 }
